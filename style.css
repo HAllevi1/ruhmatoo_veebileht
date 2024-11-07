@@ -1,0 +1,124 @@
+/* Üldised stiilid */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.vaheleht {
+    position: relative;
+    background: url("pildid/taust2.jpg") center / cover no-repeat;
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Ülekate */
+.vaheleht::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.vaheleht * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Pealkiri */
+.vaheleht h1 {
+    font-size: 2em;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+/* Sisu paigutus */
+.sisu {
+    max-width: 1200px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Sektsioon - iga rehvi info blokk */
+.sektsioon {
+    display: flex;
+    align-items: center; /* Vertikaalselt keskele */
+    margin-bottom: 40px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Tekst vasakul */
+.tekst {
+    flex: 2;
+    padding-right: 20px;
+    text-align: left;
+}
+
+.tekst h3 {
+    font-size: 1.5em;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.tekst ul {
+    list-style: disc inside;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+/* Pilt paremal */
+.pilt {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pilt img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sektsioon2 {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+ul {
+    margin-bottom: 20px; /* Lisab vahet alla */
+}
+
+h2 {
+    margin-top: 20px; /* Lisab vahet üles */
+}
