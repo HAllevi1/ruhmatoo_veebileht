@@ -1,0 +1,227 @@
+/* Üldised stiilid */
+* {
+    margin: 0; /* Eemaldab vaikimisi marginaalid */
+    padding: 0; /* Eemaldab vaikimisi polsterduse */
+    box-sizing: border-box; /* Muudab mõõtmise loogikat, et padding ja border ei suurendaks elemendi suurust */
+    font-family: Arial, sans-serif; /* Määrab vaikimisi fondi */
+}
+
+body, html {
+    width: 100%; /* Seab keha ja HTML-i laiuseks 100% */
+    height: 100%; /* Seab keha ja HTML-i kõrguseks 100% */
+    background-color: #f4f4f4; /* Määrab keha taustavärvi */
+    color: #333; /* Määrab keha teksti värvi */
+}
+
+/* Päise stiilid */
+header {
+    display: flex; /* Kasutab flexboxi paigutust */
+    align-items: center; /* Joondab elemendid vertikaalselt keskele */
+    justify-content: space-between; /* Paigutab logo ja menüü kaugele */
+    padding: 20px 5%; /* Päise sisemine kaugus äärest */
+    background: linear-gradient(45deg, #a1a1a1, #535353); /* Lisab taustale gradient */
+    color: white; /* Määrab teksti värviks valge */
+    position: fixed; /* Hoiab päist ekraani ülaservas ka lehe kerimisel */
+    width: 100%; /* Täidab kogu ekraani laiuse */
+    top: 0; /* Asetab päise ekraani ülaserva */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Väike vari päise all */
+    z-index: 1000; /* Asetab päise teiste elementide kohale */
+}
+
+/* Logo stiilid */
+.logo a {
+    display: flex; /* Kasutab flexboxi logo joondamiseks */
+    align-items: center; /* Joondab logo vertikaalselt keskele */
+    text-decoration: none; /* Eemaldab lingi allajoone */
+    color: white; /* Määrab lingi värviks valge */
+}
+
+.logo img {
+    transform: scale(1); /* Suurendab logo 20% võrra, muuda vastavalt soovile */
+    height: 75px;
+    width: 250px;
+    margin-right: 10px;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Sujuv üleminek suuruse ja hover-efekti jaoks */
+}
+
+
+
+.logo img:hover {
+    opacity: 0.8; /* Vähendab läbipaistmatust hover-efekti ajal */
+}
+
+/* Navigeerimismenüü */
+.navigation ul {
+    display: flex; /* Kuvab menüü elemendid horisontaalselt */
+    list-style: none; /* Eemaldab vaikimisi punktid loendilt */
+}
+
+.navigation ul li {
+    margin-left: 20px; /* Lisab vahe elementide vahele */
+}
+
+.navigation ul li a {
+    color: white; /* Määrab linkide värviks valge */
+    text-decoration: none; /* Eemaldab lingi allajoone */
+    font-size: 18px; /* Määrab lingi teksti suuruse */
+    padding: 5px 15px; /* Lisab sisemise kauguse lingi ümber */
+    border-radius: 5px; /* Ümarad nurgad lingile */
+    transition: background-color 0.3s, color 0.3s; /* Sujuv üleminek hover-efekti jaoks */
+}
+
+.navigation ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Taustale lisandub poolläbipaistev taust hover-efekti ajal */
+    color: #ffdd59; /* Muudab teksti värvi hover-efekti ajal */
+}
+
+/* Hamburgeri ikooni stiilid (väiksematel ekraanidel) */
+.hamburger {
+    display: none; /* Peidab hamburgeri ikooni suurematel ekraanidel */
+    font-size: 24px; /* Määrab hamburgeri ikooni suuruse */
+    cursor: pointer; /* Muudab kursori klikitavaks */
+    color: white; /* Määrab ikooni värvi valgeks */
+}
+
+/* Responsiivne disain - väiksemad ekraanid */
+@media (max-width: 768px) {
+    .navigation {
+        display: none; /* Peidab menüü väikestel ekraanidel */
+    }
+
+    .hamburger {
+        display: block; /* Kuvab hamburgeri ikooni väikestel ekraanidel */
+    }
+
+    .navigation.show {
+        display: flex; /* Kuvab menüü, kui see on aktiivne */
+        position: absolute; /* Asetab menüü päise alla */
+        top: 70px; /* Paigutab menüü päise alla */
+        left: 0; /* Seab menüü vasakule */
+        right: 0; /* Seab menüü paremale */
+        background: linear-gradient(45deg, #6a11cb, #2575fc); /* Lisab menüü taustale gradientse värvi */
+        flex-direction: column; /* Kuvab menüü elemendid vertikaalselt */
+        align-items: center; /* Joondab menüü elemendid keskele */
+        padding: 10px 0; /* Lisab sisemise kauguse menüü ülemisele ja alumisele servale */
+    }
+
+    .navigation ul {
+        flex-direction: column; /* Kuvab loendi elemendid vertikaalselt */
+    }
+
+    .navigation ul li {
+        margin: 10px 0; /* Lisab vahe elementide vahele */
+    }
+}
+
+/* Vahelehe stiilid */
+.vaheleht {
+    position: relative; /* Positsioneerib elemendi ja võimaldab pseudo-elementi kasutada */
+    background: url("pildid/taust2.jpg") center / cover no-repeat; /* Lisab taustapildi, mis katab kogu ala */
+    width: 100%; /* Täidab kogu laiuse */
+    min-height: 100vh; /* Vähemalt kogu ekraani kõrgus */
+    padding: 40px; /* Lisab sisemise kauguse sisu ja servade vahel */
+    color: #333; /* Määrab teksti värvi */
+    display: flex; /* Kasutab flexboxi sisu joondamiseks */
+    flex-direction: column; /* Kuvab elemendid vertikaalselt */
+    align-items: center; /* Joondab elemendid horisontaalselt keskele */
+    text-align: center; /* Keskele joondatud tekst */
+}
+
+/* Ülekate */
+.vaheleht::before {
+    content: ""; /* Pseudo-element ilma sisuta */
+    position: absolute; /* Paigutab pseudo-elemendi tausta kohale */
+    top: 0; left: 0; /* Paigutab pseudo-elemendi alguspunkti */
+    width: 100%; height: 100%; /* Katab kogu vahelehe */
+    background-color: rgba(255, 255, 255, 0.6); /* Poolläbipaistev valge taust */
+    z-index: 1; /* Asetab pseudo-elemendi taustast kõrgemale */
+    pointer-events: none; /* Väldib pseudo-elemendiga suhtlemist */
+}
+
+.vaheleht * {
+    position: relative; /* Asetab elemendid pseudo-elemendi kohale */
+    z-index: 2; /* Jätab elemendid pseudo-elemendi kohale */
+}
+
+/* Vahelehe pealkiri */
+.vaheleht h1 {
+    font-size: 2em; /* Määrab pealkirja suuruse */
+    font-weight: bold; /* Määrab rasvase pealkirja */
+    color: #222; /* Määrab pealkirja värvi */
+    margin-bottom: 20px; /* Lisab vahe pealkirja alla */
+}
+
+/* Sisu paigutus */
+.sisu {
+    max-width: 1200px; /* Määrab maksimaalse laiuse */
+    width: 100%; /* Täidab kogu laiuse */
+    margin-top: 20px; /* Lisab vahe sisu ülemisse serva */
+}
+
+/* Sektsioon - iga info blokk */
+.sektsioon {
+    display: flex; /* Kasutab flexboxi elemendi paigutamiseks */
+    align-items: center; /* Joondab elemendid vertikaalselt keskele */
+    margin-bottom: 40px; /* Lisab vahe sektsioonide vahele */
+    padding: 20px; /* Lisab sisemise kauguse sektsioonile */
+    background: rgba(255, 255, 255, 0.9); /* Poolläbipaistev valge taust */
+    border-radius: 8px; /* Ümarad nurgad sektsioonile */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Lisab vari sektsioonile */
+}
+
+/* Tekstiosa vasakul */
+.tekst {
+    flex: 2; /* Suurem osa painduvast ruumist tekstile */
+    padding-right: 20px; /* Lisab vahe paremale küljele */
+    text-align: left; /* Joondab teksti vasakule */
+}
+
+.tekst h3 {
+    font-size: 1.5em; /* Määrab pealkirja suuruse */
+    color: #444; /* Määrab pealkirja värvi */
+    margin-bottom: 10px; /* Lisab vahe pealkirja alla */
+}
+
+.tekst ul {
+    list-style: disc inside; /* Kuvab loendi punkte tekstis sees */
+    margin-top: 10px; /* Lisab vahe loendi ülemisse serva */
+    line-height: 1.6; /* Suurendab reavahet, et tekst oleks loetavam */
+}
+
+/* Pilt paremal */
+.pilt {
+    flex: 1; /* Annab painduvat ruumi pildile */
+    display: flex; /* Kasutab flexboxi */
+    justify-content: center; /* Joondab pildi horisontaalselt keskele */
+    align-items: center; /* Joondab pildi vertikaalselt keskele */
+}
+
+.pilt img {
+    max-width: 100%; /* Ei ületa pildi konteinert */
+    height: auto; /* Säilitab pildi proportsioonid */
+    border-radius: 8px; /* Lisab ümarad nurgad pildile */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lisab vari pildile */
+}
+
+/* Keskendatud sektsioon */
+.sektsioon2 {
+    display: flex;
+    flex-direction: column; /* Paigutab elemendid vertikaalselt */
+    justify-content: center; /* Joondab elemendid keskele */
+    align-items: center; /* Joondab elemendid horisontaalselt keskele */
+    margin-bottom: 40px; /* Lisab vahe sektsioonide vahele */
+    padding: 20px; /* Lisab sisemise kauguse sektsioonile */
+    background: rgba(255, 255, 255, 0.9); /* Poolläbipaistev taust sektsioonile */
+    border-radius: 8px; /* Ümarad nurgad */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Lisab sektsioonile vari */
+    text-align: center; /* Joondab teksti keskele */
+}
+
+/* Üldine reavahe */
+ul {
+    margin-bottom: 20px; /* Lisab vahe loendi alla */
+}
+
+h2 {
+    margin-top: 20px; /* Lisab vahe pealkirja kohale */
+}
