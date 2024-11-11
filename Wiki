@@ -3,3 +3,6 @@ Meie rühma Wiki.
 Eeimene leht mis valmis sai oli Rehvivahetus.html, koos sellega valmis ka header sektsioon ja style.css
 Teine leht mis valmis oli rehvide_ajalugu.html
 Kolmas leht mis valmib on Avaleht.html
+
+
+Siiani on iga rühmaliige teinud vähemalt ühe HTML-i. Kasutanud css-i. Osalenud pidevalt aruteludes.
