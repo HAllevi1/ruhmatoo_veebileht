@@ -1,0 +1,89 @@
+/* Üldised stiilid */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Hero sektsioon */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url("pildid/avaleht_talverehv.jpg") no-repeat center center/cover;
+    color: white;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.cta-btn {
+    background-color: #ffdd59;
+    padding: 10px 30px;
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cta-btn:hover {
+    background-color: #f8a200;
+}
+
+/* Peidetud nupud */
+#additional-buttons {
+    display: none; /* Alguses peidetud */
+    justify-content: space-between; /* Jagab nupud ühtlaselt üle kogu ala */
+    margin-top: 30px;
+}
+
+/* Nuppude vaheline ruum */
+#additional-buttons button {
+    margin: 0 15px; /* Lisab igale nupule horisontaalset ruumi */
+}
+
+/* Jaluse stiil */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Vastavus väiksematele ekraanidele */
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 2.5em;
+    }
+
+    #additional-buttons {
+        flex-direction: column;
+        padding: 0 10%;
+    }
+
+    /* Veenduge, et nuppude vaheline ruum oleks ka vertikaalne väikeste ekraanide puhul */
+    #additional-buttons button {
+        margin: 10px 0;
+    }
+}
