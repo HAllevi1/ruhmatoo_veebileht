@@ -19,7 +19,7 @@ document.getElementById("rehvivahetus").addEventListener("click", function() {
 });
 
 document.getElementById("rehvideajalugu").addEventListener("click", function() {
-    window.location.href = "rehvide-ajalugu.html";  // Link vastavale lehele
+    window.location.href = "rehvide_ajalugu.html";  // Link vastavale lehele
 });
 
 document.getElementById("rehvitähised").addEventListener("click", function() {
