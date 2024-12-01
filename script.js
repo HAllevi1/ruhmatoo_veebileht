@@ -5,23 +5,23 @@ function toggleMenu() {
 }
 
 // Funktsioon, mis peidab "Loe rohkem" nupu ja kuvab uued nupud
-document.getElementById("load-more-btn").addEventListener("click", function() {
+document.getElementById("laerohkem").addEventListener("click", function() {
     // Peidame "Loe rohkem" nupu
-    document.getElementById("load-more-btn").style.display = "none";
+    document.getElementById("laerohkem").style.display = "none";
     
     // Kuvame uued nupud
-    document.getElementById("additional-buttons").style.display = "flex";  // Kuvame nupud
+    document.getElementById("nupud").style.display = "flex";  // Kuvame nupud
 });
 
 // Funktsioon, mis viib kasutaja vastavale lehele
-document.getElementById("tire-change-btn").addEventListener("click", function() {
+document.getElementById("rehvivahetus").addEventListener("click", function() {
     window.location.href = "rehvivahetus.html";  // Link vastavale lehele
 });
 
-document.getElementById("tire-history-btn").addEventListener("click", function() {
+document.getElementById("rehvideajalugu").addEventListener("click", function() {
     window.location.href = "rehvide-ajalugu.html";  // Link vastavale lehele
 });
 
-document.getElementById("tire-marks-btn").addEventListener("click", function() {
+document.getElementById("rehvitähised").addEventListener("click", function() {
     window.location.href = "rehvitahised.html";  // Link vastavale lehele
 });

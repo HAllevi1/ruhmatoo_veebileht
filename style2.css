@@ -49,14 +49,14 @@ body, html {
 }
 
 /* Peidetud nupud */
-#additional-buttons {
+#nupud {
     display: none; /* Alguses peidetud */
     justify-content: space-between; /* Jagab nupud ühtlaselt üle kogu ala */
     margin-top: 30px;
 }
 
 /* Nuppude vaheline ruum */
-#additional-buttons button {
+#nupud button {
     margin: 0 15px; /* Lisab igale nupule horisontaalset ruumi */
 }
 
@@ -77,13 +77,13 @@ footer {
         font-size: 2.5em;
     }
 
-    #additional-buttons {
+    #nupud {
         flex-direction: column;
         padding: 0 10%;
     }
 
-    /* Veenduge, et nuppude vaheline ruum oleks ka vertikaalne väikeste ekraanide puhul */
-    #additional-buttons button {
+    
+    #nupud button {
         margin: 10px 0;
     }
 }
