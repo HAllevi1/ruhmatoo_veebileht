@@ -225,3 +225,11 @@ ul {
 h2 {
     margin-top: 20px; /* Lisab vahe pealkirja kohale */
 }
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
