@@ -1,8 +1,22 @@
 Meie rühma Wiki.
 
+<<<<<<< Updated upstream
 Eeimene leht mis valmis sai oli Rehvivahetus.html, koos sellega valmis ka header sektsioon ja style.css
 Teine leht mis valmis oli rehvide_ajalugu.html
 Kolmas leht mis valmib on Avaleht.html
 
 
 Siiani on iga rühmaliige teinud vähemalt ühe HTML-i. Kasutanud css-i. Osalenud pidevalt aruteludes.
+=======
+Eeimene leht mis valmis sai oli Rehvivahetus.html, koos sellega valmis ka header sektsioon ja style.css. See leht räägib millal võib suverehvid ja millal võib talverehvid autole alla panna ning lisaks räägib see sellest, kuidas talverehvid ja suverehvid erinevad.
+
+Teine leht mis valmis sai oli rehvide_ajalugu.html. See räägib suverehvide ja talverehvide ajaloo tähtsamatest sündmustest kuni tänapäevani.
+
+Kolmas leht mis valmis sai oli Avaleht.html. Sealt lehelt saab valida, millise teema kohta veebilehe külastaja lugeda soovib. Valikus on rehvivahetus, rehvide ajalugu ja rehvitähised.
+
+Neljas leht, mis valmis sai oli rehvitähised.html. See leht räägib, mida tähendavad rehvide külgedel olevad numbrid ja tähised. Veel räägib see, kuidas valida endale õiged rehvid ning annab ülevaate velgede ja rehvide omavahelisest sobivusest.
+
+Veebilehel kasutatavad pildid on kõik ühes kaustas.
+
+Iga meie rühmaliige teinud vähemalt ühe HTML faili, kasutanud CSS-i ja osalenud pidevalt aruteludes.
+>>>>>>> Stashed changes
