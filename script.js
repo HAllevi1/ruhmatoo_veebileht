@@ -1,3 +1,5 @@
+//JS-i tegi Henri, chatgpt aitas.
+
 // Funktsioon, mis lülitab navigeerimismenüü sisse/välja väiksematel ekraanidel
 function toggleMenu() {
     const navbar = document.getElementById("navbar");
@@ -6,10 +8,10 @@ function toggleMenu() {
 
 // Funktsioon, mis peidab "Loe rohkem" nupu ja kuvab uued nupud
 document.getElementById("laerohkem").addEventListener("click", function() {
-    // Peidame "Loe rohkem" nupu
+    // muudab "Loe rohkem" nähtamatuks
     document.getElementById("laerohkem").style.display = "none";
     
-    // Kuvame uued nupud
+    // kuvame uued nupud flex paigutuses, et need oleks nähtaval ja joondatud üksteise kõrvale
     document.getElementById("nupud").style.display = "flex";  // Kuvame nupud
 });
 
